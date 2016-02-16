@@ -2,7 +2,7 @@
 <html lang="en-us">
   <head>
     <meta charset="UTF-8">
-    <title>Reactive-inspector by kaiengelhardt</title>
+    <title>Reactive Inspector by kaiengelhardt</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link rel="stylesheet" type="text/css" href="stylesheets/normalize.css" media="screen">
     <link href='https://fonts.googleapis.com/css?family=Open+Sans:400,700' rel='stylesheet' type='text/css'>
@@ -11,8 +11,8 @@
   </head>
   <body>
     <section class="page-header">
-      <h1 class="project-name">Reactive-inspector</h1>
-      <h2 class="project-tagline"></h2>
+      <h1 class="project-name">Reactive Inspector</h1>
+      <h2 class="project-tagline">Debugging for Reactive Programming</h2>
       <a href="https://github.com/kaiengelhardt/reactive-inspector" class="btn">View on GitHub</a>
       <a href="https://github.com/kaiengelhardt/reactive-inspector/zipball/master" class="btn">Download .zip</a>
       <a href="https://github.com/kaiengelhardt/reactive-inspector/tarball/master" class="btn">Download .tar.gz</a>
@@ -30,16 +30,14 @@
 <h4>
 <a id="reactive-tree" class="anchor" href="#reactive-tree" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Reactive Tree</h4>
 
-<p>The reactive tree view lets you inspect variables, signals, events and their dependencies in a visualization of the dependency graph in your app. You can see the values of the individual nodes as they change over time and the tree provides you with visual cues when a significant event occurs, such as a value change or when an exception is thrown.</p>
-
-<p><img src="images/dependency-graph.png" alt="Dependency Graph Visualization"></p>
+<p>The reactive tree view lets you inspect variables, signals, events and their dependencies in a visualization of the dependency graph in your app. You can see the values of the individual nodes as they change over time and the tree provides you with visual cues when a significant event occurs, such as a value change or when an exception is thrown.
+<img src="images/dependency-graph.png" alt="Dependency Graph Visualization"></p>
 
 <h4>
 <a id="tree-outline" class="anchor" href="#tree-outline" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Tree Outline</h4>
 
-<p>In a big dependency graph it is sometimes hard to navigate in the reactive tree. This view shows you at a glance where you are in the graph and helps you jump quickly to a different portion of the graph.</p>
-
-<p><img src="images/tree-outline.png" alt="Tree Outline"></p>
+<p>In a big dependency graph it is sometimes hard to navigate in the reactive tree. This view shows you at a glance where you are in the graph and helps you jump quickly to a different portion of the graph.
+<img src="images/tree-outline.png" alt="Tree Outline"></p>
 
 <h4>
 <a id="time-travel" class="anchor" href="#time-travel" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Time Travel</h4>
@@ -54,13 +52,15 @@ This video shows you how it works in action.</p>
 <h4>
 <a id="history-queries" class="anchor" href="#history-queries" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>History Queries</h4>
 
-<p>This feature allows you to search specific events from the past in the history of the graph.  </p>
+<p>Scrubbing through past values is useful, but it can become cumbersome if you have a big dependency graph. With History Queries you can search in the history for specific reactive events.
+<img src="images/history-queries.png" alt="History Queries"></p>
 
 <h4>
 <a id="reactive-breakpoints" class="anchor" href="#reactive-breakpoints" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Reactive Breakpoints</h4>
 
 <p>One of the most helpful features  in finding those little bugs that hide between the lines of your code is Reactive Breakpoints.  With Reactive Breakpoints we give you the possibiliy to set breakpoints at certain reactive events. Create queries, such as <code>nodeEvaluated</code>, and the debugger will pause if an event matches the query during the execution.
-Go right to the place were the program was interrupted and find the bug that you were searching for so long.</p>
+Go right to the place were the program was interrupted and find the bug that you were searching for so long.
+<img src="images/reactive-breakpoints.png" alt="Reactive Breakpoints"></p>
 
 <h4>
 <a id="time-profiling" class="anchor" href="#time-profiling" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Time Profiling</h4>
@@ -73,13 +73,16 @@ Go right to the place were the program was interrupted and find the bug that you
 <li>Absolute Performance (sum) - shows the sum of the evaluation times of the nodes</li>
 </ul>
 
+<p><img src="images/time-profiling.png" alt="Time Profiling"></p>
+
 <h4>
 <a id="node-search--dependency-highlighting" class="anchor" href="#node-search--dependency-highlighting" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Node Search / Dependency Highlighting</h4>
 
-<p>Reactive Inspector allows you to find nodes by their names. This makes navigation in dependancy graphs more comfortable. You can also highlight a node and all of its dependencies. This allows you to find the dependencies and  of a selected node much easier.
+<p>Reactive Inspector allows you to find nodes by their names. This makes navigation in dependancy graphs more comfortable.
 <img src="images/node-search.png" alt="Node search"></p>
 
-<p><img src="images/highlight-dependencies-children.png" alt="Highlight dependents of a node">
+<p>You can also highlight a node and all of its dependencies. This allows you to find the dependencies and  of a selected node much easier.
+<img src="images/highlight-dependencies-children.png" alt="Highlight dependents of a node">
 <img src="images/highlight-dependencies-ancestors.png" alt="Highlight dependencies of a node"></p>
 
 <h2>
@@ -107,11 +110,9 @@ Go right to the place were the program was interrupted and find the bug that you
 <h4>
 <a id="create-a-new-project" class="anchor" href="#create-a-new-project" aria-hidden="true"><span aria-hidden="true" class="octicon octicon-link"></span></a>Create a new project</h4>
 
-<p>If you want to create a new project with REclipse support you can use the <a href="https://github.com/m1c3/reclipse-template">REclipse Template</a> project as a starting point:</p>
+<p>If you want to create a new project with REclipse support you can use the Reactive Inspector template project contained in this repository as a starting point.</p>
 
-<p><code>git clone https://github.com/m1c3/reclipse-template.git</code></p>
-
-<p>Then you can import the project into Eclipse via sbt:</p>
+<p>You can import the project into Eclipse via sbt:</p>
 
 <ul>
 <li><code>sbt eclipse</code></li>
@@ -151,7 +152,7 @@ Go right to the place were the program was interrupted and find the bug that you
 </ul>
 
       <footer class="site-footer">
-        <span class="site-footer-owner"><a href="https://github.com/kaiengelhardt/reactive-inspector">Reactive-inspector</a> is maintained by <a href="https://github.com/kaiengelhardt">kaiengelhardt</a>.</span>
+        <span class="site-footer-owner"><a href="https://github.com/kaiengelhardt/reactive-inspector">Reactive Inspector</a> is maintained by <a href="https://github.com/kaiengelhardt">kaiengelhardt</a>.</span>
 
         <span class="site-footer-credits">This page was generated by <a href="https://pages.github.com">GitHub Pages</a> using the <a href="https://github.com/jasonlong/cayman-theme">Cayman theme</a> by <a href="https://twitter.com/jasonlong">Jason Long</a>.</span>
       </footer>
